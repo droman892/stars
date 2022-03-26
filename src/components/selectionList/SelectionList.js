@@ -5,14 +5,19 @@ export const SelectionList = ({characters}) => {
     console.log(characters);
 
     const [selected, setSelected] = useState('');
-    // console.log(selected);
 
 
-    const setData = (e) => {
-        setSelected(e.target.value)
+    const decision = (e) => {
+        console.log(e)
+        // setSelected(e.target.value)
+        setSelected({name: e.target.value})
     }
 
     console.log(selected);
+
+    // const test = (e) => {
+    //     console.log('Billy Boy')
+    // }
 
     return (
         <>
@@ -29,18 +34,19 @@ export const SelectionList = ({characters}) => {
                     grid
                     place-content-center"
             >
-
                 {characters.length > 0 ? (
                         <select 
                             id="characters"
                             name="characters" 
                             className="text-4xl" 
-                            value={selected}
-                            onChange={(e) => setData(e)}>
+                            value={selected.name}
+                            onChange={(e) => decision(e)}>
                             {characters.map((character) => 
                                 <option 
                                     value={character.name} 
                                     key={character.name}
+                                    hair={character.hair_color}
+                                    // onClick={(e) => test(e)}
                                 >
                                     {character.name}
                                 </option>
@@ -50,12 +56,6 @@ export const SelectionList = ({characters}) => {
                         <></>
                     )
                 }
-
-                
-                
-
-
-
             </div>
 
             <div 
