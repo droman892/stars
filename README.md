@@ -1,5 +1,5 @@
 React 
-Tailwind CSS
+Tailwind CSS (https://tailwindcss.com/docs/guides/create-react-app)
 Jest
 Axios
 
