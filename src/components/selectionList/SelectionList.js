@@ -8,12 +8,7 @@ export const SelectionList = ({characters}) => {
     // console.log(selected);
 
 
-    const setData = () => {
-        console.log('Jerry');
-    }
-
-    const test = (e) => {
-        
+    const setData = (e) => {
         setSelected(e.target.value)
     }
 
@@ -41,13 +36,11 @@ export const SelectionList = ({characters}) => {
                             name="characters" 
                             className="text-4xl" 
                             value={selected}
-                            // onChange={(e) => setSelected(e.target.value)}>
-                            onChange={(e) => test(e)}>
+                            onChange={(e) => setData(e)}>
                             {characters.map((character) => 
                                 <option 
                                     value={character.name} 
                                     key={character.name}
-                                    onChange={setData}
                                 >
                                     {character.name}
                                 </option>
