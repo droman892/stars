@@ -6,18 +6,20 @@ import { Section2 } from "./pages/section2/Section2";
 export const App = () => {
     return (
         <>
-            {/* <div 
-                id="section1" 
+            <div 
                 className="
                     grid 
                     gap-4 
                     grid-cols-12
-                    grid-rows-6"
+                    grid-rows-6
+                    h-screen
+                    w-screen
+                    max-w-full"
             >
                 <Headline />
                 <Caption />
                 <ReadyLink />
-            </div> */}
+            </div>
             <Section2 />
         </>
         

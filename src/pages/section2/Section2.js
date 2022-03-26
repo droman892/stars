@@ -7,16 +7,6 @@ export const Section2 = () => {
 
     const [characters, setCharacters] = useState([]);
 
-    // useEffect(() => {
-    //     axios.get('https://swapi.dev/api/people').then(res => 
-    //         setCharacters(res.data.results))
-    //         .catch(err => {
-    //             console.log('Error Message' + err)
-    //         });
-    //   }, []);
-
-    
-
     useEffect(() => {
         const sendGetRequest = async () => {
         try {
@@ -31,12 +21,14 @@ export const Section2 = () => {
  
     return (
         <div
-            id="section2" 
             className="
                 grid 
                 gap-4 
                 grid-cols-12
-                grid-rows-6"
+                grid-rows-6
+                h-screen
+                w-screen
+                max-w-full"
         >
             <Instructions />
             <SelectionList characters={characters}/>
