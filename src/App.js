@@ -7,6 +7,7 @@ export const App = () => {
     return (
         <>
             <div 
+                id="section1"
                 className="
                     grid 
                     gap-4 

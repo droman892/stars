@@ -21,6 +21,7 @@ export const Section2 = () => {
  
     return (
         <div
+            id="section2"
             className="
                 grid 
                 gap-4 
