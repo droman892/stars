@@ -18,6 +18,8 @@ export const Section2 = () => {
         };
         sendGetRequest();
     }, []);
+
+    if (!characters) return <></>;
  
     return (
         <div
@@ -29,7 +31,8 @@ export const Section2 = () => {
                 grid-rows-6
                 h-screen
                 w-screen
-                max-w-full"
+                max-w-full
+                p-4"
         >
             <Instructions />
             <SelectionList characters={characters}/>

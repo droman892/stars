@@ -12,7 +12,7 @@ export const ReadyLink = () => {
             place-content-center"
         >
             <h3 className="text-4xl">
-                If you're ready to learn, click here.
+                If you're ready to learn, click <a href="#section2">here</a>.
             </h3>
         </div>
     )

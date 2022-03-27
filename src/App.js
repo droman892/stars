@@ -15,7 +15,8 @@ export const App = () => {
                     grid-rows-6
                     h-screen
                     w-screen
-                    max-w-full"
+                    max-w-full
+                    p-4"
             >
                 <Headline />
                 <Caption />

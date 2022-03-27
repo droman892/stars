@@ -12,3 +12,4 @@ export const Headline = () =>
     >
         <h1 className="text-9xl">Star Wars</h1>
     </div>;
+    

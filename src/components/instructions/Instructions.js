@@ -12,7 +12,7 @@ export const Instructions = () => {
             place-content-center"
         >
             <h3 className="text-4xl">
-                Choose your character, and may the force be with you...
+                May the force be with you...
             </h3>
         </div>
     )

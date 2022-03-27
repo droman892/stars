@@ -19,3 +19,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+/* div#selectionContainer {
+  display: none;
+} */
+
+.appear {
+  display: contents !important;
+}
+
+.remove {
+  display: hidden;
+}
