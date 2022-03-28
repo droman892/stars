@@ -1,18 +1,14 @@
 export const ReadyLink = () => {
     return (
-        <div className="
-            col-start-2
-            col-end-12
-            row-start-5
-            row-end-6
-            justify-center
-            content-center
+        <div 
+            id="readyLink"
+            className="
+            mt-6
             text-center
-            grid
-            place-content-center"
+            overflow-hidden"
         >
-            <h3 className="text-4xl">
-                If you're ready to learn, click <a href="#section2">here</a>.
+            <h3 className="text-3xl ">
+                If you're ready to learn, click <a href="#section2" className="underline">here</a>.
             </h3>
         </div>
     )

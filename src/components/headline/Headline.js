@@ -1,15 +1,10 @@
 export const Headline = () => 
     <div className="
-        col-start-3
-        col-end-11
-        row-start-2
-        row-end-4
+    
+        flex
         justify-center
-        content-center
-        text-center
-        grid
-        place-content-center"
+        overflow-hidden"
     >
-        <h1 className="text-9xl">Star Wars</h1>
+        <h1 className="text-6xl self-end">Star Wars</h1>
     </div>;
     

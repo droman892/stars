@@ -5,21 +5,12 @@ export const SelectionList = ({characters}) => {
     const characterArray = [...characters];
 
     const [selected, setSelected] = useState('');
-    // console.log("Selected State: " + selected);
-
-    
 
     const decision = (e) => {
         setSelected(e.target.value)
-        // console.log(e.target.value)
     }
 
     const [characterInfo, setCharacterInfo] = useState('');
-
-    // console.log(characterInfo);
-
-    
-
 
     useEffect(() => {
        for (let i=0; i < characterArray.length; i ++) {
@@ -29,27 +20,20 @@ export const SelectionList = ({characters}) => {
     } 
     }, [selected, characterArray])
 
-
     return (
         <>
             <div
-                id="selectionContainer" 
+                id="selectionList" 
                 className="
-                    col-start-2
-                    col-end-12
-                    row-start-3
-                    row-end-4
-                    justify-center
-                    content-center
-                    text-center
-                    grid
-                    place-content-center"
+                grid
+                place-content-center
+                overflow-hidden"
             >
                 {characterArray.length > 0 ? (
                         <select 
                             id="characters"
                             name="characters" 
-                            className="text-4xl" 
+                            className="text-3xl" 
                             value={selected}
                             onChange={(e) => decision(e)}
                         >
@@ -76,37 +60,34 @@ export const SelectionList = ({characters}) => {
                 id="results"
                 className="
                     grid
-                    gap-4
-                    grid-cols-4
-                    col-start-2
-                    col-end-12
-                    row-start-4"
+                    grid-cols-2
+                    p-5"
             >
 
                 {selected.length > 0 ? (
                 <>
-                        <h3 className="text-4xl">
+                        <h3 className="text-3xl">
                             Birth Year:
                         </h3>
-                        <h3 className="text-4xl">
+                        <h3 className="text-3xl">
                             {characterInfo.birth_year}
                         </h3>
-                        <h3 className="text-4xl">
+                        <h3 className="text-3xl">
                             Hair Color:
                         </h3>
-                        <h3 className="text-4xl">
+                        <h3 className="text-3xl">
                             {characterInfo.hair_color}
                         </h3>
-                        <h3 className="text-4xl">
+                        <h3 className="text-3xl">
                             Gender:
                         </h3>
-                        <h3 className="text-4xl">
+                        <h3 className="text-3xl">
                             {characterInfo.gender}
                         </h3>
-                        <h3 className="text-4xl">
+                        <h3 className="text-3xl">
                             Eye Color:
                         </h3>
-                        <h3 className="text-4xl">
+                        <h3 className="text-3xl">
                             {characterInfo.eye_color}
                         </h3>    
                     </>

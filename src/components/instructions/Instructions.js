@@ -1,17 +1,11 @@
 export const Instructions = () => {
     return (
         <div className="
-            col-start-2
-            col-end-12
-            row-start-2
-            row-end-3
-            justify-center
-            content-center
+            flex
             text-center
-            grid
-            place-content-center"
+            overflow-hidden"
         >
-            <h3 className="text-4xl">
+            <h3 className="text-3xl self-end">
                 May the force be with you...
             </h3>
         </div>

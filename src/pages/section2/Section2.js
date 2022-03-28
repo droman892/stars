@@ -25,10 +25,11 @@ export const Section2 = () => {
         <div
             id="section2"
             className="
+
                 grid 
-                gap-4 
-                grid-cols-12
-                grid-rows-6
+                grid-rows-[2fr_1fr_5fr]
+                gap-4
+                grid-cols-1
                 h-screen
                 w-screen
                 max-w-full

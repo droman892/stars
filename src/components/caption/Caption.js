@@ -1,20 +1,23 @@
+import { ReadyLink } from "../readyLink/ReadyLink"
+
+
 export const Caption = () => {
     return (
-        <div className="
-            col-start-2
-            col-end-12
-            row-start-4
-            row-end-5
-            justify-center
-            content-center
+        <div 
+            id="caption"
+            className="
+            
+
+            flex flex-col
             text-center
-            grid
-            place-content-center"
+            overflow-hidden"
         >
-            <h3 className="text-4xl">
+            <h3 className="text-3xl">
                 Developers took on one of history's most iconic movie 
                 series and publicized its juicy content.
             </h3>
+
+            <ReadyLink />
         </div>
     )
 }
