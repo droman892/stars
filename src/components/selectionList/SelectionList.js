@@ -5,19 +5,29 @@ export const SelectionList = ({characters}) => {
     const characterArray = [...characters];
 
     const [selected, setSelected] = useState('');
-    console.log("Selected State: " + selected);
+    // console.log("Selected State: " + selected);
 
     
 
     const decision = (e) => {
         setSelected(e.target.value)
-        console.log(e.target.value)
+        // console.log(e.target.value)
     }
 
     const [characterInfo, setCharacterInfo] = useState('');
 
+    // console.log(characterInfo);
+
     
 
+
+    useEffect(() => {
+       for (let i=0; i < characterArray.length; i ++) {
+        if (characterArray[i].name === selected) {
+            setCharacterInfo(characterArray[i])
+        }
+    } 
+    }, [selected, characterArray])
 
 
     return (
@@ -62,11 +72,7 @@ export const SelectionList = ({characters}) => {
                 }
             </div>
 
-
-
-
-
-            {/* <div 
+            <div 
                 id="results"
                 className="
                     grid
@@ -76,86 +82,39 @@ export const SelectionList = ({characters}) => {
                     col-end-12
                     row-start-4"
             >
-                {characterArray.length > 0 ? (
-                    <>
-                    {characterArray.map((character) => 
-                        <div 
-                            className="hidden"
-                            id={character.name} 
-                            // id={character.created}
-                        >
-                            <h3 className="text-4xl">
-                                Birth Year:
-                            </h3>
-                            <h3 className="text-4xl">
-                                {character.birth_year}
-                            </h3>
-                            <h3 className="text-4xl">
-                                Hair Color:
-                            </h3>
-                            <h3 className="text-4xl">
-                                {character.hair_color}
-                            </h3>
-                            <h3 className="text-4xl">
-                                Gender:
-                            </h3>
-                            <h3 className="text-4xl">
-                                {character.gender}
-                            </h3>
-                            <h3 className="text-4xl">
-                                Eye Color:
-                            </h3>
-                            <h3 className="text-4xl">
-                                {character.eye_color}
-                            </h3>    
-                        </div>
-                    )}
-                    </>
-                    ) : (
-                        <></>
-                    )
-                }
 
-            </div> */}
-
-
-
-
-
-
-                {/* <>
+                {selected.length > 0 ? (
+                <>
                         <h3 className="text-4xl">
                             Birth Year:
                         </h3>
                         <h3 className="text-4xl">
-                            ...
+                            {characterInfo.birth_year}
                         </h3>
                         <h3 className="text-4xl">
                             Hair Color:
                         </h3>
                         <h3 className="text-4xl">
-                            ...
+                            {characterInfo.hair_color}
                         </h3>
                         <h3 className="text-4xl">
                             Gender:
                         </h3>
                         <h3 className="text-4xl">
-                            ...
+                            {characterInfo.gender}
                         </h3>
                         <h3 className="text-4xl">
                             Eye Color:
                         </h3>
                         <h3 className="text-4xl">
-                            ...
+                            {characterInfo.eye_color}
                         </h3>    
-                    </> */}
+                    </>
+                ) : (
+                    <></>
+                )}
 
-
-                    {/* <h1>{characterArray.length > 0 ? (characterArray[0].name) : ('') } </h1> */}
-
-
-
-            
+            </div>
         </>
     )
 }

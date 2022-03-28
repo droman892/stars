@@ -3,6 +3,8 @@ Tailwind CSS (https://tailwindcss.com/docs/guides/create-react-app)
 Jest
 Axios
 
+Grid Layout
+
 
 Conventions:
 - have separate test folder (except with create-react-app I guess)
