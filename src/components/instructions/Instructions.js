@@ -2,7 +2,8 @@ export const Instructions = () => {
     return (
         <div className="
             flex
-            text-center
+            justify-center
+            px-6
             overflow-hidden"
         >
             <h3 className="text-3xl self-end">

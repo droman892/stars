@@ -1,10 +1,15 @@
 import { useState, useEffect } from "react";
+import { useSelected } from "../../hooks/useSelected";
+import { useDecision } from "../../pages/functions/decision";
+import { SelectOptions } from "../selectOptions/SelectOptions";
+import { CharacterData } from "../characterData/CharacterData";
 
 export const SelectionList = ({characters}) => {
 
     const characterArray = [...characters];
 
-    const [selected, setSelected] = useState('');
+    const { selected, setSelected } = useSelected();
+    // console.log(selected);
 
     const decision = (e) => {
         setSelected(e.target.value)
@@ -29,71 +34,21 @@ export const SelectionList = ({characters}) => {
                 place-content-center
                 overflow-hidden"
             >
-                {characterArray.length > 0 ? (
-                        <select 
-                            id="characters"
-                            name="characters" 
-                            className="text-3xl" 
-                            value={selected}
-                            onChange={(e) => decision(e)}
-                        >
-
-                            <option value='' defaultValue='selected'>Select Your Character</option>
-
-                            {characterArray.map((character) => 
-                                <option 
-                                    value={character.name} 
-                                    key={character.name}
-                                    hair={character.hair_color}
-                                >
-                                    {character.name}
-                                </option>
-                            )}
-                        </select>
-                    ) : (
-                        <></>
-                    )
-                }
+                <SelectOptions characters={characters} decision={decision} selected={selected}/>
             </div>
 
             <div 
                 id="results"
                 className="
-                    grid
-                    grid-cols-2
-                    p-5"
+                   
+                    px-5
+                    pb-32"
             >
 
-                {selected.length > 0 ? (
-                <>
-                        <h3 className="text-3xl">
-                            Birth Year:
-                        </h3>
-                        <h3 className="text-3xl">
-                            {characterInfo.birth_year}
-                        </h3>
-                        <h3 className="text-3xl">
-                            Hair Color:
-                        </h3>
-                        <h3 className="text-3xl">
-                            {characterInfo.hair_color}
-                        </h3>
-                        <h3 className="text-3xl">
-                            Gender:
-                        </h3>
-                        <h3 className="text-3xl">
-                            {characterInfo.gender}
-                        </h3>
-                        <h3 className="text-3xl">
-                            Eye Color:
-                        </h3>
-                        <h3 className="text-3xl">
-                            {characterInfo.eye_color}
-                        </h3>    
-                    </>
-                ) : (
-                    <></>
-                )}
+                <CharacterData selected={selected} characterInfo={characterInfo.birth_year} desc="Birth Year:"/>
+                <CharacterData selected={selected} characterInfo={characterInfo.hair_color} desc="Hair Color:"/>
+                <CharacterData selected={selected} characterInfo={characterInfo.gender} desc="Gender:"/>
+                <CharacterData selected={selected} characterInfo={characterInfo.eye_color} desc="Eye Color:"/>
 
             </div>
         </>
