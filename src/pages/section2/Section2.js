@@ -13,7 +13,7 @@ export const Section2 = () => {
             const res = await axios.get('https://swapi.dev/api/people');
             setCharacters(res.data.results)
         } catch (err) {
-            console.error(err);
+            console.error('CAUGHT IN API REQUEST - ' + err);
         }
         };
         sendGetRequest();

@@ -3,7 +3,9 @@ Tailwind CSS (https://tailwindcss.com/docs/guides/create-react-app)
 Jest
 Axios
 
-Grid Layout
+
+
+Grid Layout w/ Flexbox
 
 
 Conventions:

@@ -1,10 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useSelected } from "../../hooks/useSelected";
 import { useDecision } from "../../pages/functions/decision";
 import { SelectOptions } from "../selectOptions/SelectOptions";
 import { CharacterData } from "../characterData/CharacterData";
+import { CharacterContext } from "../../context/CharacterContext";
 
 export const SelectionList = ({characters}) => {
+
+    const charactersRequested = useContext(CharacterContext);
+    console.log(charactersRequested)
 
     const characterArray = [...characters];
 
@@ -18,6 +22,9 @@ export const SelectionList = ({characters}) => {
     const [characterInfo, setCharacterInfo] = useState('');
 
     useEffect(() => {
+
+       
+
        for (let i=0; i < characterArray.length; i ++) {
         if (characterArray[i].name === selected) {
             setCharacterInfo(characterArray[i])
@@ -40,7 +47,8 @@ export const SelectionList = ({characters}) => {
             <div 
                 id="results"
                 className="
-                   
+                    max-w-xl
+                    justify-self-center    
                     px-5
                     pb-32"
             >

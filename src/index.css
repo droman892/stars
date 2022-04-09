@@ -26,5 +26,9 @@ code {
 
 
 div#charData {
-  background-color: grey;
+  background-color: rgb(207, 207, 207);
+}
+
+h3.end-align {
+  text-align: end;
 }
