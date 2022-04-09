@@ -5,12 +5,10 @@ import { SelectOptions } from "../selectOptions/SelectOptions";
 import { CharacterData } from "../characterData/CharacterData";
 import { CharacterContext } from "../../context/CharacterContext";
 
-export const SelectionList = ({characters}) => {
+export const SelectionList = () => {
 
-    const charactersRequested = useContext(CharacterContext);
-    console.log(charactersRequested)
-
-    const characterArray = [...characters];
+    const characters = useContext(CharacterContext);
+    console.log(characters)
 
     const { selected, setSelected } = useSelected();
     // console.log(selected);
@@ -25,12 +23,12 @@ export const SelectionList = ({characters}) => {
 
        
 
-       for (let i=0; i < characterArray.length; i ++) {
-        if (characterArray[i].name === selected) {
-            setCharacterInfo(characterArray[i])
+       for (let i=0; i < characters.length; i ++) {
+        if (characters[i].name === selected) {
+            setCharacterInfo(characters[i])
         }
     } 
-    }, [selected, characterArray])
+    }, [selected, characters])
 
     return (
         <>
