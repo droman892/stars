@@ -1,6 +1,5 @@
 export const Headline = () => 
     <div className="
-    
         flex
         justify-center
         overflow-hidden"
