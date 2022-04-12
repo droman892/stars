@@ -2,14 +2,33 @@ import { Section1 } from "./pages/section1/Section1";
 import { Section2 } from "./pages/section2/Section2";
 import { CharacterContext } from "./context/CharacterContext";
 import { useGetCharacters } from "./hooks/useGetCharacters";
+import Lottie from "react-lottie";
+import animationData from "./animation/babyYodaLottie.json";
 
 export const App = () => {
 
     const characters = useGetCharacters();
 
-    console.log(characters);
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+          preserveAspectRatio: "xMidYMid slice"
+        }
+      };
 
-    if (!characters) return <h1>The page isn't ready.</h1>;
+    if (!characters) {
+        return (
+            <div>
+                <Lottie 
+                    options={defaultOptions}
+                    height={400}
+                    width={400}
+                />
+            </div>
+        )
+    }
 
     return (
         <>
