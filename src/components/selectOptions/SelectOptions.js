@@ -1,10 +1,8 @@
 export const SelectOptions = ({selected, characters, decision}) => {
 
-    const characterArray = [...characters];
-
     return (
         <>
-            {characterArray.length > 0 ? (
+            {characters.length > 0 ? (
                 <select 
                     id="characters"
                     name="characters" 
@@ -15,7 +13,7 @@ export const SelectOptions = ({selected, characters, decision}) => {
 
                     <option value='' defaultValue='selected'>Select Your Character</option>
 
-                    {characterArray.map((character) => 
+                    {characters.map((character) => 
                         <option 
                             value={character.name} 
                             key={character.name}

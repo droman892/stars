@@ -1,7 +1,5 @@
-import { useState, useEffect } from "react";
 import { Instructions } from "../../components/instructions/Instructions"
 import { SelectionList } from "../../components/selectionList/SelectionList"
-import axios from 'axios';
 
 export const Section2 = () => {
  

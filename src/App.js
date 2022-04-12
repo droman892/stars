@@ -1,29 +1,15 @@
 import { Section1 } from "./pages/section1/Section1";
 import { Section2 } from "./pages/section2/Section2";
-import { useState, useEffect, createContext } from "react";
 import { CharacterContext } from "./context/CharacterContext";
-import axios from 'axios';
+import { useGetCharacters } from "./hooks/useGetCharacters";
 
 export const App = () => {
 
-    const [characters, setCharacters] = useState([]);
+    const characters = useGetCharacters();
 
-    useEffect(() => {
+    console.log(characters);
 
-        const sendGetRequest = async () => {
-            try {
-                const res = await axios.get('https://swapi.dev/api/people');
-                setCharacters(res.data.results)
-            } catch (err) {
-                console.error('CAUGHT IN API REQUEST - ' + err);
-            }
-        };
-
-        sendGetRequest();
-
-    }, []);
-
-    if (!characters) return <></>;
+    if (!characters) return <h1>The page isn't ready.</h1>;
 
     return (
         <>
@@ -32,6 +18,5 @@ export const App = () => {
                 <Section2 />
             </CharacterContext.Provider>
         </>
-        
     )
 };
