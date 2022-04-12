@@ -10,19 +10,13 @@ export const useGetCharacters = () => {
             try {
                 const res = await axios.get('https://swapi.dev/api/people');
                 setCharacters(res.data.results);
-                console.log('nice');
+                console.log('nice')
             } catch (err) {
                 console.error('CAUGHT IN API REQUEST - ' + err);
             }
-        };
+    };
 
-    useEffect(() => {
-
-        getCharacters();
-
-        // setTimeout(, 3000);
-
-    }, []);
+    useEffect(() => { setTimeout(() => getCharacters(), 5000); }, []);
 
     return characters
 };

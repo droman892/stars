@@ -4,10 +4,17 @@ import { CharacterContext } from "./context/CharacterContext";
 import { useGetCharacters } from "./hooks/useGetCharacters";
 import Lottie from "react-lottie";
 import animationData from "./animation/babyYodaLottie.json";
+import { useState, useEffect } from "react";
 
 export const App = () => {
 
     const characters = useGetCharacters();
+
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => setLoading(true), 3000);
+    }, [])
 
     const defaultOptions = {
         loop: true,
