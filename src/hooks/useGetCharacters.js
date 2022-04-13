@@ -16,7 +16,7 @@ export const useGetCharacters = () => {
             }
     };
 
-    useEffect(() => { setTimeout(() => getCharacters(), 3000); }, []);
+    useEffect(() => { setTimeout(() => getCharacters(), 1000); }, []);
 
     return characters
 };
