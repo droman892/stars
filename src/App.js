@@ -9,7 +9,7 @@ export const App = () => {
 
     const characters = useGetCharacters();
 
-    if (!characters) return <BabyYodaLottie />; 
+    if (true) return <BabyYodaLottie />; 
         
     return (
         <>

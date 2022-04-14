@@ -44,16 +44,29 @@ h3.end-align {
   background-image: url("./assets/SpaceBackground.png");
 }
 
-.sw-transition {
+/* .sw-transition {
   transition: height 5s, width 5s;
   transition-timing-function: ease-in;
+} */
+
+/* .final-sw-logo-size {
+  height: 100px;
+} */
+
+
+/* img:hover {
+  height: 100px;
+  transition: height 10s;
+} */
+
+
+#sw-logo {
+  animation: titleShrink 13s 1;
+  animation-timing-function: ease;
+  max-width: none;
 }
 
-.final-sw-logo-size {
-  height: 100px;
-}
-
-
-.sw-transition:hover {
-  height: 100px;
+@keyframes titleShrink {
+  from {height: 150rem;}
+  to {height: 10px;}
 }

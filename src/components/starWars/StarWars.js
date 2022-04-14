@@ -5,14 +5,14 @@ export const StarWars = ( {characters} ) => {
 
 
 
-    const shrinkLogo = () => {
+    const logoGone = () => {
         const logo = document.getElementById("sw-logo");
-        logo.classList.add("final-sw-logo-size");
+        logo.remove();
     }
 
-    // useEffect(() => {
-    //     shrinkLogo();
-    // }, []);
+    useEffect(() => {
+        setTimeout(logoGone, 12000);
+    }, []);
 
     return (
         <div 
