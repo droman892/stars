@@ -3,34 +3,33 @@ import { StarWars } from "../starWars/StarWars";
 
 export const Opener = () => {
 
-    const fadeInOpener = () => {
-        const openingLine = document.getElementById("opening-line");
-        openingLine.classList.add("fadeInOpener");
-    }
-
     const fadeAwayOpener = () => {
-        const openingLine = document.getElementById("opening-line");
-        openingLine.classList.add("fadeAwayOpener");
+        const openingContainer = document.getElementById("opening-container");
+        openingContainer.classList.add("fadeAwayOpener");
+        setTimeout(removeOpener, 5000);
     }
 
     const removeOpener = () => {
-        const openingLine = document.getElementById("opening-line");
+        const openingLine = document.getElementById("opener");
         openingLine.remove();
+
+        swCrawler();
     }
 
     const swCrawler = () => {
-        const opener = document.getElementById("opener");
-        opener.classList.add("remove-display");
-
         const sw = document.getElementById("sw");
         sw.classList.add("add-display");
     }
 
     useEffect(() => {
-        setTimeout(fadeInOpener, 2000);
-        setTimeout(fadeAwayOpener, 10000);
-        setTimeout(removeOpener, 11000);
-        setTimeout(swCrawler, 13000);
+
+        const fadeInOpener = () => {
+            const openingContainer = document.getElementById("opening-container");
+            openingContainer.classList.add("fadeInOpener");
+            setTimeout(fadeAwayOpener, 10000);
+        }
+        
+        setTimeout(fadeInOpener, 3000);
     }, []);
 
     return (

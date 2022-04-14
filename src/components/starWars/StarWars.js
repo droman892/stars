@@ -9,7 +9,7 @@ export const StarWars = ( {characters} ) => {
     }
 
     useEffect(() => {
-        setTimeout(logoGone, 25900);
+        setTimeout(logoGone, 26000);
     }, []);
 
     return (
@@ -22,7 +22,6 @@ export const StarWars = ( {characters} ) => {
                 h-screen
                 w-screen
                 max-w-full
-                p-4
                 bg-black
                 sw-space"
         >
@@ -34,7 +33,7 @@ export const StarWars = ( {characters} ) => {
                     <picture  className="self-center">
                         <source srcSet={SWLogo} type="image/webp" alt="Star Wars Logo"/>
                         <source srcSet={SWLogo} type="image/png" />
-                        <img id="sw-logo" src={SWLogo} alt="Star Wars Logo" className="sw-transition" />
+                        <img id="sw-logo" src={SWLogo} alt="Star Wars Logo" />
                     </picture>
                     
                 </div>

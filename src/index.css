@@ -61,14 +61,14 @@ h3.end-align {
 
 
 #sw-logo {
-  animation: titleShrink 13s 1;
-  animation-timing-function: linear;
+  animation: titleShrink 13s linear forwards;
+  /* animation-timing-function: linear; */
   max-width: none;
 }
 
 @keyframes titleShrink {
   from {height: 150rem;}
-  to {height: 10px;}
+  to {height: 50px;}
 }
 
 
@@ -80,7 +80,7 @@ h3.end-align {
 
 
 .fadeInOpener {
-  animation: fadeInLine 2s 1;
+  animation: fadeInLine 2s;
   color: rgba(34 211 238);
 }
 
@@ -90,7 +90,7 @@ h3.end-align {
 }
 
 .fadeAwayOpener {
-  animation: fadeAwayOpener 1s;
+  animation: fadeAwayOpener 2s forwards;
   color: rgba(34 211 238);
 }
 
