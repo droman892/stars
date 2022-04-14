@@ -4,20 +4,22 @@ import { CharacterContext } from "./context/CharacterContext";
 import { useGetCharacters } from "./hooks/useGetCharacters";
 import { BabyYodaLottie } from "./components/babyYodaLottie/BabyYodaLottie";
 import { StarWars } from "./components/starWars/StarWars";
+import { Opener } from "./components/opener/Opener";
 
 export const App = () => {
 
     const characters = useGetCharacters();
 
-    if (true) return <BabyYodaLottie />; 
+    if (!characters) return <BabyYodaLottie />; 
         
     return (
         <>
-            <StarWars characters={characters} />
+            <Opener />
+            {/* <StarWars characters={characters} />
             <Section1 />
             <CharacterContext.Provider value={characters}>
                 <Section2 />
-            </CharacterContext.Provider>
+            </CharacterContext.Provider> */}
         </>
     )
 };
