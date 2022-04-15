@@ -10,14 +10,14 @@ export const BabyYodaLottie = () => {
                 h-screen
                 w-screen
                 max-w-full
-                absolute"
+                absolute
+                bg-white"
         >
             <div id="lottie-container" className="mt-32">   
                 <Lottie 
                     id="baby-yoda"
                     options={defaultLottieOptions}
-                    height={400}
-                    width={400}    
+                    className="w-auto h-auto lottie" 
                 />
             </div> 
         </div> 

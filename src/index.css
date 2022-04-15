@@ -14,6 +14,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  overflow: hidden;
+
+  background-image: url("./assets/SpaceBackground.png");
+  
 }
 
 code {
@@ -21,63 +26,27 @@ code {
     monospace;
 }
 
-
-
-
-
-
-div#charData {
-  background-color: rgb(207, 207, 207);
-}
-
-h3.end-align {
-  text-align: end;
-}
-
-
-
-.sw-yellow {
-  color: rgba(255, 232, 31);
-}
-
-.sw-space {
-  background-image: url("./assets/SpaceBackground.png");
-}
-
-/* .sw-transition {
-  transition: height 5s, width 5s;
-  transition-timing-function: ease-in;
-} */
-
-/* .final-sw-logo-size {
-  height: 100px;
-} */
-
-
-/* img:hover {
-  height: 100px;
-  transition: height 10s;
-} */
-
+/* ---------------------- ANIMATIONS ---------------------- */
 
 #sw-logo {
   animation: titleShrink 13s linear forwards;
-  /* animation-timing-function: linear; */
   max-width: none;
 }
 
 @keyframes titleShrink {
   from {height: 150rem;}
-  to {height: 50px;}
+  to {height: 30px;}
 }
 
-
-.opener {
-  font-size: 6rem;
-  max-width: 85rem;
+#sw-picture {
+  animation: fadeLogo 1s linear forwards;
+  animation-delay: 12s;
 }
 
-
+@keyframes fadeLogo {
+  from {opacity: 1}
+  to {opacity: 0}
+}
 
 .fadeInOpener {
   animation: fadeInLine 2s;
@@ -99,10 +68,94 @@ h3.end-align {
   to {opacity: 0;}
 }
 
-.remove-display {
-  display: none;
-}
+/* ---------------------- ---------------------- ---------------------- */
 
 .add-display {
   display: block;
+}
+
+div#charData {
+  background-color: rgb(207, 207, 207);
+}
+
+div#root {
+  background-image: url("./assets/SpaceBackground.png");
+}
+
+#lottie-container {
+  max-width: 400px;
+  max-height: 400px;
+  margin: 5rem auto;
+}
+
+.opener {
+  font-size: 3rem;
+  max-width: 45rem;
+  margin-top: -100px;
+}
+
+.sw-yellow {
+  color: rgba(255, 232, 31);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.crawl-wrap {
+  margin: 0 auto;
+  perspective: 40px;
+}
+
+#crawl-text-container {
+  font-size: 3vw;
+  line-height: 1.5em;
+  font-weight: bold;
+  text-align: justify;
+  position: relative;
+  animation: scroll 110s linear forwards;
+  /* transform: translateZ(-120px) rotateX(20deg); */
+}
+
+/* @keyframes scroll {
+  from {top: 0; transform: translateZ(0) rotateX(-5deg)}
+  to {top: -7500px; transform: translateZ(-120px) rotateX(-16deg)}
+} */
+
+
+@keyframes scroll {
+  from {top: 0}
+  to {top: -7500px;}
 }

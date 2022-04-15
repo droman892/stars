@@ -15,6 +15,12 @@ export const App = () => {
     return (
         <>
             <Opener />
+
+            {/* <StarWars /> */}
+
+
+
+
             {/* <StarWars characters={characters} />
             <Section1 />
             <CharacterContext.Provider value={characters}>
