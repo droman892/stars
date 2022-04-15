@@ -1,36 +1,10 @@
 import { useEffect } from "react";
 import { StarWars } from "../starWars/StarWars";
+import { fadeInOpener } from "../../functions/fadeInOpener";
 
 export const Opener = () => {
 
-    const fadeAwayOpener = () => {
-        const openingContainer = document.getElementById("opening-container");
-        openingContainer.classList.add("fadeAwayOpener");
-        setTimeout(removeOpener, 5000);
-    }
-
-    const removeOpener = () => {
-        const openingLine = document.getElementById("opener");
-        openingLine.remove();
-
-        swCrawler();
-    }
-
-    const swCrawler = () => {
-        const sw = document.getElementById("sw");
-        sw.classList.add("add-display");
-    }
-
-    useEffect(() => {
-
-        const fadeInOpener = () => {
-            const openingContainer = document.getElementById("opening-container");
-            openingContainer.classList.add("fadeInOpener");
-            setTimeout(fadeAwayOpener, 10000);
-        }
-        
-        setTimeout(fadeInOpener, 3000);
-    }, []);
+    useEffect(() => {setTimeout(fadeInOpener, 3000)}, []);
 
     return (
         <>
