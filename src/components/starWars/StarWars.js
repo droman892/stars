@@ -6,14 +6,11 @@ export const StarWars = () => {
         <div 
             id="sw-crawl"
             className="
-                grid 
-                gap-8
-                grid-cols-1
                 h-screen
                 w-screen
                 max-w-full"
         >
-                <div className="
+                {/* <div className="
                         flex
                         justify-center
                         overflow-hidden"
@@ -22,17 +19,17 @@ export const StarWars = () => {
                         <img id="sw-logo" src={SWLogo} alt="Star Wars Logo" />
                     </picture>
                     
-                </div>
+                </div> */}
 
-                {/* <div id="fade-space">
 
-                    <div className="flex h-full w-3/5 crawl-wrap">
+                    <div id="crawl-wrap" className="flex h-full crawl-wrap">
+
                         <div id="crawl-text-container" className="sw-yellow">
-                            <p>START lorem100 wefjnjek fkjwne fjkw enfkjw nfkjn wkfnwk enfkw nfkwf kjnwjk  nf nkjwjnfkjwen kw  nwefkjwef wnf kw efkj nwekfn wekfn wefkn nwekfnwefn wkefnekfn efkne rkf erknf ekrnfke </p>
-                            <p>lorem100 wefjnjek fkjwne fjkw enfkjw nfkjn wkfnwk enfkw nfkwf kjnwjk  nf nkjwjnfkjwen kw  nwefkjwef wnf kw efkj nwekfn wekfn wefkn nwekfnwefn wkefnekfn efkne rkf erknf ekrnfke </p>
-                            <p>lorem100 wefjnjek fkjwne fjkw enfkjw nfkjn wkfnwk enfkw nfkwf kjnwjk  nf nkjwjnfkjwen kw  nwefkjwef wnf kw efkj nwekfn wekfn wefkn nwekfnwefn wkefnekfn efkne rkf erknf ekrnfke </p>
-                            <p>lorem100 wefjnjek fkjwne fjkw enfkjw nfkjn wkfnwk enfkw nfkwf kjnwjk  nf nkjwjnfkjwen kw  nwefkjwef wnf kw efkj nwekfn wekfn wefkn nwekfnwefn wkefnekfn efkne rkf erknf ekrnfke </p>
-                            <p>lorem100 wefjnjek fkjwne fjkw enfkjw nfkjn wkfnwk enfkw nfkwf kjnwjk  nf nkjwjnfkjwen kw  nwefkjwef wnf kw efkj nwekfn wekfn wefkn nwekfnwefn wkefnekfn efkne rkf erknf ekrnfke </p>
+                            <p className="text-center">Episode I</p>
+                            <p className="text-center">THE DROMAN</p>
+                            <p>Havoc plagues the entirety of the universe.</p>
+                            <p>ONE lorem100 wefjnjek fkjwne fjkw enfkjw nfkjn wkfnwk enfkw nfkwf kjnwjk  nf nkjwjnfkjwen kw  nwefkjwef wnf kw efkj nwekfn wekfn wefkn nwekfnwefn wkefnekfn efkne rkf erknf ekrnfke </p>
+                            <p> lorem100 wefjnjek fkjwne fjkw enfkjw nfkjn wkfnwk enfkw nfkwf kjnwjk  nf nkjwjnfkjwen kw  nwefkjwef wnf kw efkj nwekfn wekfn wefkn nwekfnwefn wkefnekfn efkne rkf erknf ekrnfke </p>
                             <p>lorem100 wefjnjek fkjwne fjkw enfkjw nfkjn wkfnwk enfkw nfkwf kjnwjk  nf nkjwjnfkjwen kw  nwefkjwef wnf kw efkj nwekfn wekfn wefkn nwekfnwefn wkefnekfn efkne rkf erknf ekrnfke </p>
                             <p>lorem100 wefjnjek fkjwne fjkw enfkjw nfkjn wkfnwk enfkw nfkwf kjnwjk  nf nkjwjnfkjwen kw  nwefkjwef wnf kw efkj nwekfn wekfn wefkn nwekfnwefn wkefnekfn efkne rkf erknf ekrnfke </p>
                             <p>lorem100 wefjnjek fkjwne fjkw enfkjw nfkjn wkfnwk enfkw nfkwf kjnwjk  nf nkjwjnfkjwen kw  nwefkjwef wnf kw efkj nwekfn wekfn wefkn nwekfnwefn wkefnekfn efkne rkf erknf ekrnfke </p>
@@ -41,7 +38,6 @@ export const StarWars = () => {
                         </div>
                     </div>
 
-                </div> */}
 
 
         </div>

@@ -8,15 +8,15 @@ import { Opener } from "./components/opener/Opener";
 
 export const App = () => {
 
-    const characters = useGetCharacters();
+    // const characters = useGetCharacters();
 
-    if (!characters) return <BabyYodaLottie />; 
+    // if (!characters) return <BabyYodaLottie />; 
         
     return (
         <>
-            <Opener />
+            {/* <Opener /> */}
 
-            {/* <StarWars /> */}
+            <StarWars />
 
 
 

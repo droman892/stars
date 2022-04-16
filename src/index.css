@@ -136,26 +136,58 @@ div#root {
 
 .crawl-wrap {
   margin: 0 auto;
-  perspective: 40px;
+  perspective: 400px;
+  overflow: hidden;
 }
 
 #crawl-text-container {
-  font-size: 3vw;
+  margin: 0 auto;
+  font-size: 10vw;
   line-height: 1.5em;
   font-weight: bold;
   text-align: justify;
   position: relative;
-  animation: scroll 110s linear forwards;
-  /* transform: translateZ(-120px) rotateX(20deg); */
+  animation: scroll 20s linear infinite;
 }
 
-/* @keyframes scroll {
-  from {top: 0; transform: translateZ(0) rotateX(-5deg)}
-  to {top: -7500px; transform: translateZ(-120px) rotateX(-16deg)}
+@keyframes scroll {
+  from {top: 100%; transform: translateZ(0) rotateX(30deg)}
+  to {top: -1000px; transform: translateZ(-1000px) rotateX(31deg)}
+}  
+
+
+
+
+
+div#crawl-text-container p {
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+/* body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(255,255,255,0) 90%);
 } */
 
 
-@keyframes scroll {
-  from {top: 0}
-  to {top: -7500px;}
-}
+
+/* body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  opacity: 0.1;
+} */
+
+
