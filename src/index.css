@@ -148,18 +148,18 @@ div#root {
 #crawl-text-container {
   margin: 0 auto;
   font-size: 10vw;
-  line-height: 1.5em;
+  /* line-height: 1.5em; */
   font-weight: bold;
   text-align: justify;
   position: relative;
-  animation: scroll 90s linear forwards;
+  animation: scroll 70s linear infinite;
   margin-top: 10rem;
 }
 
 
 @keyframes scroll {
-  from {top: 100%; transform: translateZ(0) rotateX(35deg)}
-  to {top: -7500px; transform: translateZ(-5500px) rotateX(36deg)}
+  from {top: 100%; transform: translateZ(0) rotateX(27deg)}
+  to {top: -12000px; transform: translateZ(-6500px) rotateX(28deg)}
 }  
 
 
