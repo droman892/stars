@@ -48,6 +48,10 @@ code {
   to {opacity: 0}
 }
 
+
+
+
+
 .fadeInOpener {
   animation: fadeInLine 2s;
   color: rgba(34 211 238);
@@ -128,14 +132,6 @@ div#root {
 
 
 
-#space-container {
-  position: fixed;
-  z-index: 1;
-  height: 40%;
-  overflow: hidden;
-  width: 100%;
-
-}
 
 
 
@@ -148,11 +144,11 @@ div#root {
 #crawl-text-container {
   margin: 0 auto;
   font-size: 10vw;
-  /* line-height: 1.5em; */
   font-weight: bold;
   text-align: justify;
   position: relative;
   animation: scroll 70s linear infinite;
+  animation-delay: 3s;
   margin-top: 10rem;
 }
 
