@@ -27,7 +27,15 @@ export const Opener = () => {
                     justify-center
                     overflow-hidden"
                 >
-                    <h1 id="opening-line" className="opener self-center md:pl-8">
+                    <h1 
+                        id="opening-line" 
+                        className="
+                            opener 
+                            self-center 
+                            md:pl-8 
+                            md:text-8xl
+                            md:max-w-none"
+                    >
                         A long time ago in a galaxy far, far away...
                     </h1>
                 </div>

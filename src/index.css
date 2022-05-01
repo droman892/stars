@@ -92,6 +92,10 @@ div#root {
   margin: 5rem auto;
 }
 
+
+
+
+
 .opener {
   font-size: 3rem;
   max-width: 45rem;
@@ -120,7 +124,9 @@ div#root {
 
 
 
-
+.view-crawl {
+  display: flex;
+}
 
 
 
@@ -147,16 +153,60 @@ div#root {
   font-weight: bold;
   text-align: justify;
   position: relative;
-  animation: scroll 70s linear infinite;
-  animation-delay: 3s;
+  animation: scrollSM 70s linear forwards;
   margin-top: 10rem;
 }
 
 
-@keyframes scroll {
+/* @keyframes scroll {
   from {top: 100%; transform: translateZ(0) rotateX(27deg)}
-  to {top: -12000px; transform: translateZ(-6500px) rotateX(28deg)}
-}  
+  to {top: -1600%; transform: translateZ(-6500px) rotateX(24deg)}
+}   */
+
+@media (min-width: 400px) { 
+  #crawl-text-container {
+    animation: scrollMD 70s linear forwards;
+  }
+}
+
+@media (min-width: 525px) { 
+  #crawl-text-container {
+    animation: scrollMD2 70s linear forwards;
+  }
+}
+
+@media (min-width: 1024px) { 
+  #crawl-text-container {
+    animation: scrollLG 70s linear forwards;
+  }
+}
+
+@keyframes scrollSM {
+  from {top: 100%; transform: translateZ(0) rotateX(27deg)}
+  to {top: -550%; transform: translateZ(-1600px) rotateX(20deg)}
+} 
+
+@keyframes scrollMD {
+    from {top: 100%; transform: translateZ(0) rotateX(20deg)}
+    to {top: -600%; transform: translateZ(-1600px) rotateX(12deg)}
+}
+
+@keyframes scrollMD2 {
+  from {top: 100%; transform: translateZ(0) rotateX(20deg)}
+  to {top: -1000%; transform: translateZ(-2700px) rotateX(17deg)}
+}
+
+@keyframes scrollLG {
+  from {top: 100%; transform: translateZ(0) rotateX(18deg)}
+  to {top: -1700%; transform: translateZ(-4400px) rotateX(14deg)}
+}
+
+
+
+
+
+
+
 
 
 
